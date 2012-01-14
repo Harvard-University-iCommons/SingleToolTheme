@@ -1,24 +1,21 @@
-
-$(document).ready( function() {
-
-	$('.isites-topic-header-menu').css("display","none");
+/* 
+ * theme-specific js stuff here... 
+ * 
+ */
+ 
+		$(document).ready(function() {
+		   $("#googleapps-temp-pw").hide();
+		 });
+				
 	
-	$('.topicMargin').mouseenter( function() {
-		$(this).find('.isites-topic-header-menu').fadeIn('fast');
-		
-	});
-	
-	$('.topicMargin').mouseleave( function() {
-		$(this).find('.isites-topic-header-menu').fadeOut('fast');
-	});
-	
-	
-	//This is for top-nav only:
-		var subnav = $('li.active').children('ul').detach();
-		$('li.active').parent().after(subnav);
-		$('li.active').children('ul').css('display','block');
-		
-});
-
-
-
+		function togglepw() {
+			/* get the password span, figure out if it's visible or not */
+			if ( $("#googleapps-temp-pw").is(":visible") ) {
+				$("#googleapps-temp-pw").hide();
+				$("#googleapps-toggle-pw").attr("value","Click here to display your password")
+			}
+			else {
+				$("#googleapps-temp-pw").show();
+				$("#googleapps-toggle-pw").attr("value","Hide password")
+			}
+		}

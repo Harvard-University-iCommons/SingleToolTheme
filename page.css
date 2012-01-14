@@ -1,0 +1,166 @@
+html, body {
+    font-family: Arial, sans-serif;
+}
+
+.floater {
+    float:left; height:50%; margin-bottom:-15em;
+}
+
+.shim {
+    float:left; height:50%; margin-bottom:-15em;
+}
+
+.main {
+    clear:both;
+    position:relative;
+    margin: auto;
+    padding: 0em;
+    min-width: 20em;
+    max-width: 50em;
+    height: 30em;
+    background: #f3f3f1; /* parchment */
+    box-shadow: rgba(0,0,0,0.6) 0px 0px 4em .5em;
+}
+
+.inner {
+    padding: 3em;
+}
+
+#isites-content {
+    padding: 3em;
+}
+
+.logo {
+    display: block;
+    margin-bottom: 4em;
+}
+
+#hidepw {
+    display: none;
+}
+
+#isites-outermost {
+    position: fixed;
+    overflow: auto;
+    background: #a51c30; /* crimson */
+    box-shadow: rgba(0,0,0,0.2) 0px 0px 5em 4em inset;
+
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+#isites-userbar {
+    text-align: right;
+    //position: fixed;
+    //left: 0;
+    //top: 0;
+    //margin: auto;
+    padding: 0px;
+    width: 100%;
+    background: #f3f3f1; /* parchment */
+    font-size: .76em;
+    line-height: .76em;
+    vertical-align: top;
+	    
+}
+
+#isites-userbar-inner {
+	padding: .5em;
+	padding-bottom: .5em;
+	padding-right: .5em;
+    line-height: .76em;
+	margin: 0px;
+}
+
+
+
+@media 
+only screen and (max-width: 500px) {
+    #isites-userbar { display: none }
+    .isites-topic-header-menu { display: none }
+}
+
+
+/* design mode topic header stuff */
+
+div.design-content {
+	float: right;
+}
+
+.design-content ul.topic-header-menu {
+	list-style: none;
+}
+
+.design-content ul.topic-header-menu li {
+	list-style: none;
+	display: list-item;
+	float: left;
+	font-size: 10px;
+	margin: 0px;
+	padding: 0px;
+}
+
+.design-content ul.topic-header-menu li a {
+	height: 17px;
+	width: 17px;
+	margin: 0px;
+	padding: 0px;
+}
+
+/* ------ */
+
+div.isites-topic-header-menu {
+	display: inline;
+	float: right;
+}
+
+.isites-topic-header-menu ul {
+	/* display: inline; */
+	list-style: none;
+}
+
+.isites-topic-header-menu ul li {
+	/* display: inline; */
+	list-style: none;
+	float: left;
+	font-size: 10px;
+	margin: .1em;
+}
+
+.isites-topic-header-menu ul li a {
+	height: 17px;
+	width: 17px;
+	margin: 0px;
+	padding: 0px;
+}
+
+h3.isites-topic-title {
+	display: inline;
+	float: left;
+	font-size: 1.25em;
+}
+
+div.isites-topic-head {
+	padding-bottom: 1em;
+	display: block;
+	height: 1.75em;
+
+}
+
+
+div.isites-topic-body {
+	clear: both;
+}
+
+.isites-topic-body h1 {
+	font-size: 1em;
+}
+
+/* Google password tool specific */
+
+span#googleapps-temp-pw {
+	padding: .5em;
+	font-size: 1.5em;
+}

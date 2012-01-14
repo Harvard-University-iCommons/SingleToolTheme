@@ -1,0 +1,43 @@
+
+<div class="isites-topic"><!-- this is where we'll add tool-specific classes -->
+	
+	<div class="topic-top"><!-- JavaScript hook - we should insert this -->
+		
+		<div class="isites-topic-head">
+
+			<h3 class="isites-topic-title"><icb:topicTitle /></h3>
+
+			<!-- ***** proposed new icon tags: -->
+			<!-- icb:topicIcon name="edit|minmax|print|..." -->
+	
+
+			<div class="isites-topic-top">
+				<icb:topicTop /><!-- this is where the page-design mode icons go -->
+			</div>
+		
+		</div>
+	
+		<!-- the tabs that appear in edit mode -->
+		<div class="isites-topic-intro">
+			<icb:notMinimized>
+				<icb:topicIntroPresent>
+					<!-- content and links for editing a topic -->
+					<icb:topicIntro />
+				</icb:topicIntroPresent>
+			</icb:notMinimized>		
+		</div>
+
+	</div><!-- end of topic-top JavaScript hook -->
+
+	<div class="topic-wrap"><!-- javascript hook - we should insert this...-->
+		<icb:notMinimized>
+			<div class="isites-topic-body">
+				<icb:content />
+			</div>
+			<div class="isites-topic-foot">
+				<!--icb:topicAttribution/-->
+			</div>
+		</icb:notMinimized>
+	</div><!-- end of topic-wrap javascript hook -->
+	
+</div>

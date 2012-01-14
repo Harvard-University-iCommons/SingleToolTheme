@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title><icb:siteTitle />: <icb:pageTitle /></title>
+	
+	
+	<!-- Date: 2011-12-29 -->
+
+	<!-- import the isites standard header resources - ideally we'd do this automatically -->
+	<icb:packet key="htmlHeader" filter="false" />
+	
+    <link rel="stylesheet" type="text/css" href="normalize.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="universal.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="page.css" media="screen"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+</head>
+<body>
+
+	<!-- all of this next div should be automatically inserted immediately after the body tag -->
+	<icb:areaExists mnemonic="tray">
+	<div id="isites-tray">
+		<!-- the close link -->
+		<icb:tabs tabTypes="traytoggle">
+			<icb:selectedTab><p class="close"><a href="<icb:tabLink />" id="isites-tray-close"><icb:tabTitle /></a></p></icb:selectedTab>
+		</icb:tabs>
+		
+		<icb:areaExists mnemonic="tray">
+		<!-- design view "tray" -->
+			<icb:areaContents mnemonic="tray">
+				<icb:instruction>
+					<icb:insert type="tray" name="main" />
+				</icb:instruction>
+			</icb:areaContents>
+		<!-- END design view "tray". -->
+		</icb:areaExists>	
+	</div>
+	</icb:areaExists>	
+	<!-- end of automatically inserted stuff -->
+	
+<div id="isites-outermost"> <!-- required wrapper div -->
+	
+    <div id="isites-userbar">
+    	<p id="isites-userbar-inner">
+    	<span id="isites-userbar-greeting">
+	        Hi, <icb:packet key="displayName" filter="true" suppress="Not Available" /> | 
+    	</span>
+    	<span id="isites-userbar-login">
+	        <!-- login/logout link: ***** should provide a single tag for general case that generates this: -->
+    	    <icb:authentication hideAccountSettings="true" hideFavoriteStar="true"><a href="<icb:authenticationRequest />" class="isites-login-link"><icb:authenticationTitle /></a></icb:authentication>
+    	</span>
+    	<span id="isites-userbar-traytoggle">
+	        <icb:tabs tabTypes="traytoggle"><icb:notSelectedTab> | <a href="<icb:tabLink />" id="isites-traytoggle-open"><icb:tabTitle /></a></icb:notSelectedTab>
+    	    </icb:tabs>
+        </span>
+        </p>
+    </div>
+
+	
+	<div class="shim"> </div>
+    <div class="main">
+	   <div id="isites-content">
+          <img src="harvard_logo.png" class="logo"/>
+		  <icb:insert type="layout" name="div" />
+	   </div>
+	</div>
+
+</div> <!-- /isites-outermost -->
+
+    <script src="universal.js" type="text/javascript"></script>
+    <script src="google.js" type="text/javascript"></script>
+	
+</body>
+</html>
